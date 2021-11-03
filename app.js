@@ -41,7 +41,7 @@ app.post('/render', (req, res) => {
             for (var i = 1; i < leftSplited.length; i++) {
                 var rightSplited = leftSplited[i].split(/\?>/);
                 if (rightSplited.length != 2) {
-                    throw new Error("Template parsing error: missing <? or ?>"); //исключение при отсутствии закрывающих скобок ?>
+                    throw new Error("Template parsing error: missing <? or ?>"); //исключение при отсутствии скобок
                 }
                 else {
                     //добавление js вставок в to_eval
